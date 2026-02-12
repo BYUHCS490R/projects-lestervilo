@@ -3,8 +3,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
   background-image:
-    url("../images/deco.png"),
-    url("../images/bg-tile.png");
+    url("../tour/images/deco.png"),
+    url("../tour/images/deco1.png");
   background-repeat:
     no-repeat,
     repeat;
@@ -30,6 +30,12 @@ nav {
 main {
   background: rgba(255,255,255,0.9);
   min-height: 60vh;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 footer {
@@ -68,8 +74,8 @@ nav a.current {
 }
 
 .place-list {
-  list-style-image: url("../bullets/bullet.png");
-  padding-left: 28px;
+  list-style-image: url("/activities/background/images/logo.png");
+  padding-left: 18px;
 }
 
 .photo {
