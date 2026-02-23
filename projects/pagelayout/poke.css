@@ -35,12 +35,14 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     background-color: #333;
     text-shadow: none;
 }
 nav ul li {
-    float: left;
+    float: none;
 }
 nav ul li a {
     display: block;
@@ -70,10 +72,54 @@ nav ul li.grasscurrent a {
 nav ul li.darkcurrent a {
     background-color: #000000;
 }
-pokemon-card {
-    border: 1px solid #ccc;
+div.pokemon-card {
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px;
+    width: min(100%, 260px);
+    margin: 0 auto;
     text-align: center;
+}
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+.pokemon-grid h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+}
+div.pokemon-card h3 {
+    margin-top: 0;
+}
+div.pokemon-card figure {
+    margin: 0;
+    text-align: center;
+}
+div.pokemon-card img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
