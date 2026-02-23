@@ -51,10 +51,7 @@ nav ul li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-nav ul li a:hover {
-    background-color: #111;
-}
-nav ul li.current a {
+nav ul li.current a{
     background-color: #925f01;
 }
 nav ul li.firecurrent a {
@@ -78,9 +75,9 @@ div.pokemon-card {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    width: min(100%, 260px);
     margin: 0 auto;
     text-align: center;
+    box-shadow: 5px 5px rgba(16, 6, 71, 0.1);
 }
 .pokemon-grid {
     display: grid;
@@ -115,6 +112,7 @@ main {
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 footer {
     background-color: #333;
