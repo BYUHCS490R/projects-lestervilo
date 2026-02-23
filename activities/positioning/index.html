@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <link rel="stylesheet" href="position.css">
+</head>
+<body>
+    <header>
+        <h1>Positioning</h1>
+        <nav>
+            <ul>
+                <li><a href="#static">Static</a></li>
+                <li><a href="#relative">Relative</a></li>
+                <li><a href="#absolute">Absolute</a></li>
+                <li><a href="#fixed">Fixed</a></li>
+                <li><a href="#sticky">Sticky</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Positioning Elements</h2>
+        <figure class="positioning-diagram">
+            <img src="../positioning/img/positioning.jpg" alt="Diagram of CSS Positioning">
+            <figcaption>Diagram illustrating different CSS positioning types.</figcaption>
+        </figure>
+        <h2>Questions</h2>
+        <ol type="1">
+            <li>What is normal flow in HTML?</li>
+            <div class="answer">
+                <p>Normal flow is the default way that HTML elements are laid out on a page. Block-level elements stack vertically, while inline elements flow horizontally within their containing block.</p>
+            </div>
+            <li>What does float do? Why do you need to clear the float?</li>
+            <div class="answer">
+                <p>Float allows elements to be taken out of the normal flow and positioned to the left or right of their container. Clearing the float is necessary to prevent subsequent elements from wrapping around the floated element, which can cause layout issues.</p>
+            </div>
+            <li>What do absolute, fixed, and relative do?</li>
+            <div class="answer">
+                <p>Absolute positioning removes an element from the normal flow and positions it relative to its nearest positioned ancestor. Fixed positioning removes the element from the normal flow and positions it relative to the viewport, so it stays in place when scrolling. Relative positioning allows you to adjust an element's position relative to its normal position in the flow.</p>
+            </div>
+            <li>How can you make nice navigation buttons for mobile devices?</li>
+            <div class="answer">
+                <p>To create nice navigation buttons for mobile devices, you can use CSS media queries to adjust the layout and styling based on the screen size. Consider using larger touch targets, stacking navigation items vertically, and using a hamburger menu for a cleaner look.</p>
+            </div>
+            <li>Where can you find videos to review what we talked about in class?</li>
+            <div class="answer">
+                <p>You can find videos on platforms like YouTube, or on educational websites that offer courses on web development and CSS.</p>
+            </div>
+        </ol>
+    </main>
+    <footer>
+        <p>&copy; 2023 Positioning. All rights reserved.</p>
+    </footer>
+</body>
+</html>
