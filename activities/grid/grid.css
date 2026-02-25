@@ -1,0 +1,34 @@
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card {
+    background-color: #57b0da;
+    border: 1px solid #9e1e1e;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 8px;
+    text-align: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+    gap: 5px;
+}
+
+nav {
+    grid-area: side;
+    display: inline-block;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header header header"
+                          "side main main"
+                          "footer footer footer";
+}
+
+footer {
+    grid-area: footer;
+}
