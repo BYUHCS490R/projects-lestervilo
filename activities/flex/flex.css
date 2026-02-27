@@ -1,0 +1,26 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.card {
+    background-color: aquamarine;
+    border: solid rgb(14, 29, 24);
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+#parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(144, 219, 148);
+    gap: 10px;
+}
+
