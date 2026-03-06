@@ -30,7 +30,6 @@ nav a:hover {
 .side {
     display: flex;
     width: 200px;
-    background-color: blueviolet;
 }
 
 main {
