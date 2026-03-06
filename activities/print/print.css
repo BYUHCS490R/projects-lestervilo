@@ -3,7 +3,9 @@ header {
     background-color: antiquewhite;
     padding: 20px;
     text-align: center;
+    position: fixed;
     width: 100%;
+    top: 0;
 }
 
 nav {
@@ -29,16 +31,18 @@ nav a:hover {
 
 .side {
     display: flex;
-    width: 200px;
-    background-color: blueviolet;
+}
+
+aside {
+    width: 250px;
 }
 
 main {
     margin: 30px;
 }
 
-.row {
-    display: flex;
+body {
+    margin-top: 80px;
 }
 
 .card {
@@ -67,32 +71,4 @@ main {
     background-color: rgb(206, 13, 13);
     padding: 5px;
     margin: auto;
-    border-radius: 10px;
-    text-wrap: nowrap;
-}
-
-@media ONLY screen AND (max-width: 600px) {
-    body {
-        background-color: burlywood;
-    }
-    nav {
-        flex-direction: column;
-    }
-    nav a {
-        border-bottom: thin solid #f5efef;
-    }
-    .row {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    .side {
-        width: 100%;
-    }
-    .card {
-        width: 95%;
-    }
-}
-
-@media print {
-    
 }
