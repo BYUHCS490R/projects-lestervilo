@@ -1,97 +1,91 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 header {
-  background-color: lightblue;
+  background-color: #f8f9fa;
+  padding: 20px;
   text-align: center;
-  padding: 15px;
 }
 
 nav {
-  background-color: #333;
+  background-color: #098332;
+  padding: 20px;
   display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
+  justify-content: space-around;
 }
 
 nav a {
   color: white;
+  margin: 0 15px;
   text-decoration: none;
-  padding: 5px 10px;
 }
 
-.layout {
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  gap: 15px;
-  padding: 15px;
 }
 
-aside {
-  width: 25%;
-  background-color: #f2f2f2;
+nav a:hover {
+  text-decoration: underline;
+  background-color: #091583;
   padding: 10px;
+  border-radius: 10px;
 }
 
 main {
-  width: 75%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-article {
+aside {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card {
   border: 1px solid #ccc;
   padding: 10px;
-  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-img {
-  width: 100%;
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.card img {
+  max-width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 footer {
-  background-color: lightblue;
+  background-color: #f8f9fa;
+  padding: 20px;
   text-align: center;
-  padding: 10px;
+  margin-top: 20px;
 }
 
-@media (max-width: 500px) {
+@media ONLY screen AND (max-width: 600px) {
   nav {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
   }
 
-  .layout {
-    flex-direction: column;
+  .card {
+    grid-template-columns: auto;
   }
 
-  main {
-    width: 100%;
-    order: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  article {
-    width: 100%;
+  body {
+    font-size: 14px;
   }
 
   aside {
-    width: 100%;
-    order: 2;
-  }
-}
-
-@media print {
-  nav {
-    display: none;
+    margin-top: 10px;
+    background-color: aqua;
   }
 }
