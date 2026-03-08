@@ -1,0 +1,97 @@
+header {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(27, 21, 2);
+    text-decoration: none;
+    margin: auto;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: rgb(110, 16, 187);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.side {
+    display: flex;
+    width: 200px;
+}
+
+main {
+    margin: 30px;
+}
+
+.row {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.card img {
+    width: 100%;
+    border: thin solid;
+    box-shadow:  5px 5px 3px;
+}
+
+.card figcaption {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: large;
+}
+
+.cardfig {
+    margin: 0;
+}
+
+.cardfig a {
+    background-color: rgb(206, 13, 13);
+    padding: 5px;
+    margin: auto;
+    border-radius: 10px;
+    text-wrap: nowrap;
+}
+
+@media ONLY screen AND (max-width: 600px) {
+    body {
+        background-color: burlywood;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        border-bottom: thin solid #f5efef;
+    }
+    .row {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .side {
+        width: 100%;
+    }
+    .card {
+        width: 95%;
+    }
+}
+
+@media print {
+    
+}

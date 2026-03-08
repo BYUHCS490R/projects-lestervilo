@@ -1,0 +1,74 @@
+header {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(27, 21, 2);
+    text-decoration: none;
+    margin: auto;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: rgb(110, 16, 187);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.side {
+    display: flex;
+}
+
+aside {
+    width: 250px;
+}
+
+main {
+    margin: 30px;
+}
+
+body {
+    margin-top: 80px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.card img {
+    width: 100%;
+    border: thin solid;
+    box-shadow:  5px 5px 3px;
+}
+
+.card figcaption {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: large;
+}
+
+.cardfig {
+    margin: 0;
+}
+
+.cardfig a {
+    background-color: rgb(206, 13, 13);
+    padding: 5px;
+    margin: auto;
+}
