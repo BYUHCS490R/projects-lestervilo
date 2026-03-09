@@ -5,8 +5,6 @@
 }
 
 body {
-  overflow-x: hidden;
-  width: 100%;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -16,17 +14,13 @@ header {
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+}
+
 nav {
   background-color: #098332;
   padding: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
 }
 
 nav ul {
@@ -34,22 +28,27 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
 }
 
 nav a:hover {
   text-decoration: underline;
-  background-color: #091583;
-  padding: 10px;
-  border-radius: 10px;
+  background-color: #06662a;
+  border-radius: 4px;
 }
 
 .parent {
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  max-width: 100%;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 aside {
@@ -57,34 +56,81 @@ aside {
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 8px;
-  height: fit-content;
+}
+
+aside h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+aside figure {
+  margin: 0 0 20px 0;
+}
+
+aside img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+aside figcaption {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+  text-align: center;
+}
+
+aside ul {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+aside li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 main {
   flex: 1;
   display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .card {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   padding: 15px;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s;
 }
 
 .card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card figure {
-  margin-bottom: 1rem;
+article {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
+article:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+article figure {
+  margin: 0 0 15px 0;
+}
+
+article img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -92,95 +138,114 @@ main {
   display: block;
 }
 
-.card figcaption {
-  font-size: 0.9rem;
+article figcaption {
+  font-size: 13px;
   color: #666;
-  margin-top: 0.5rem;
+  margin-top: 8px;
   font-style: italic;
 }
 
-.card h3 {
+article h2 {
   margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.card p {
-  margin-bottom: 0;
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+article p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 footer {
   background-color: #f8f9fa;
   padding: 20px;
   text-align: center;
-  margin-top: 20px;
+  clear: both;
 }
 
-@media ONLY screen AND (max-width: 600px) {
+footer a {
+  margin: 0 10px;
+  color: #098332;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+@media print {
   nav {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .parent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  aside {
+    flex: 0 0 auto;
+    order: 2;
+  }
+
+  main {
+    order: 1;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  nav ul {
     flex-direction: column;
     align-items: center;
-    display: flex;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #095e2b;
   }
 
   .parent {
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
+    padding: 15px;
+    gap: 15px;
   }
 
   aside {
     order: 2;
-    margin-top: 10px;
-    background-color: #f0f0f0;
   }
 
   main {
     order: 1;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 15px;
   }
 
   .card {
-    padding: 10px;
+    padding: 12px;
   }
 
   .card img {
-    height: 150px;
-  }
-
-  body {
-    font-size: 14px;
+    height: 180px;
   }
 
   header h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .parent {
-    gap: 1rem;
-    padding: 1rem;
+    font-size: 22px;
   }
 
-  aside {
-    flex: 0 0 30%;
+  header {
+    padding: 15px;
   }
 
-  main {
-    grid-template-columns: 50% 50%;
-  }
-}
-
-@media (min-width: 901px) {
-  .parent {
-    max-width: 1200px;
-    gap: 1.5rem;
-    padding: 1.5rem;
+  nav {
+    padding: 10px 0;
   }
 }
