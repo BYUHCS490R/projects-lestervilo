@@ -33,6 +33,7 @@ nav a:hover {
     border-spacing: 0;
     border-collapse: collapse;
     margin: 0 auto;
+    width: 80%;
 }
 
 /*.schedule td, .schedule th {
