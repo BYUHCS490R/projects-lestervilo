@@ -16,7 +16,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #007bff;
+    color: #0bb9d8;
     font-weight: bold;
 }
 
@@ -37,11 +37,33 @@ body {
     margin: 20px;
 }
 
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #555;
+    text-align: center;
+}
+
+.parent {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+main {
+    flex: 3;
+}
+
 aside {
     background-color: #f1f1f1;
     padding: 20px;
-    margin: 20px 0;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
 }
 
 table {
@@ -67,7 +89,15 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-tfoot {
+caption {
+    caption-side: top;
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+tfoot td{
     background-color: #f2f2f2;
     font-weight: bold;
+    text-align: center;
 }
