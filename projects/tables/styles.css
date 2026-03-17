@@ -66,6 +66,22 @@ aside {
     flex: 1;
 }
 
+aside a {
+    text-decoration: none;
+    color: #080808;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside a:hover {
+    text-decoration: underline;
+    background-color: #ddd;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
