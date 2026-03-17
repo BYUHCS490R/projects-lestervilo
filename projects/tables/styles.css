@@ -57,7 +57,7 @@ h2 {
 }
 
 main {
-    flex: 3;
+    flex: 4;
 }
 
 aside {
@@ -126,4 +126,10 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #f8f9fa;
+}
+
+@media only screen and (max-width: 600px) {
+    .parent {
+        flex-direction: column;
+    }
 }
