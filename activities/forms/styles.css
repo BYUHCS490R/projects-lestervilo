@@ -1,0 +1,66 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.row, .checkrow {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.row label {
+    width: 100px;
+    text-align: right;
+}
+
+.spacer {
+    width: 150px;
+    text-align: right;
+}
+
+input:not([type="submit"]), select, textarea {
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 3px;
+    background-color: aliceblue;
+}
+
+input:not([type="submit"]):focus, select:focus, textarea:focus {
+    background-color: lightyellow;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border-radius: 3px;
+    background-color: lightblue;
+    box-shadow: 5px 5px 3px #888888;
+}
+
+fieldset {
+    box-shadow: 5px 5px 10px #888888;
+}
+
+legend {
+    padding: 10px;
+    background-color: rgb(3, 39, 51);
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .row, .checkrow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .row label {
+        width: auto;
+        text-align: left;
+    }
+
+    .spacer {
+        width: auto;
+        text-align: left;
+    }
+    
+}

@@ -19,45 +19,48 @@
     </nav>
     <main>
         <form action="formprocs.html" method="post">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="email@byuh.edu" required>
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div>
-                <label for="country">Country:</label>
-                <select id="country" name="country">
-                    <option value="">Select your country</option>
-                    <option value="usa">United States</option>
-                    <option value="canada">Canada</option>
-                    <option value="mexico">Mexico</option>
-                    <option value="utah">Utah</option>
-                </select>
-            </div>
-            <div>
-                <label><input type="radio" name="gender" value="male">Male</label>
-                <label><input type="radio" name="gender" value="female">Female</label>
-            </div>
-            <div>
-                <label><input type="checkbox" name="remember" value="check" checked>Remember me?</label>
-            </div>
-            <div>
-                <input type="submit" value="Submit">
-            </div>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="email@byuh.edu" required>
+                </div>
+                <div class="row">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="row">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">Select your country</option>
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="utah">Utah</option>
+                    </select>
+                </div>
+                <div class="checkrow">
+                    <div class="spacer">Gender:</div>
+                    <label><input type="radio" name="gender" value="male">Male</label>
+                    <label><input type="radio" name="gender" value="female">Female</label>
+                </div>
+                <div class="checkrow">
+                    <div class="spacer"></div>
+                    <label><input type="checkbox" name="remember" value="check" checked>Remember me?</label>
+                </div>
+                <div class="row">
+                    <label>Comment:</label>
+                    <textarea name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+                <div class="spacer">
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
         </form>
-        <p>The form tag has an "action" attribute. What does it do?</p>
-        <p class="answer">The "action" attribute specifies where to send the form data when the form is submitted.</p>
-        <p>The form tag has a "method" attribute. What does it do?</p>
-        <p class="answer">The "method" attribute specifies how to send the form data (either "GET" or "POST").</p>
-        <p>What is the difference between a "POST" and a "GET"?</p>
-        <p class="answer">"GET" is for search/filter/sort while "POST" is for submitting data that will be processed on the server.</p>
     </main>
     <footer>
         <p>&copy; 2026 Forms Activity</p>
