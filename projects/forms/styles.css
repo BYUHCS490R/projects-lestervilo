@@ -7,7 +7,7 @@ header {
 
 nav {
     background-color: #c49191;
-    padding: 10px;
+    padding: 15px;
 }
 
 nav ul {
@@ -42,7 +42,7 @@ body {
 }
 
 aside {
-    background-color: #c49191;
+    background-color: #e4dbdb;
     padding: 20px;
     margin-top: 20px;
     border-radius: 8px;
@@ -70,4 +70,8 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media ONLY screen AND (max-width: 600px) {
+    
 }
