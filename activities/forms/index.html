@@ -18,7 +18,7 @@
         </ul>
     </nav>
     <main>
-        <form action="formprocs.html" method="post">
+        <form action="formprocs.html" method="get" id="myForm">
             <fieldset>
                 <legend>Personal Information</legend>
                 <div class="row">
@@ -67,3 +67,27 @@
     </footer>
 </body>
 </html>
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nameInput = document.getElementById("name").value;
+        const emailInput = document.getElementById("email").value;
+        const passwordInput = document.getElementById("password").value;
+
+        if (nameInput === "" || emailInput === "" || passwordInput === "") {
+            alert("Please fill in all required fields.");
+            return;
+        } else {
+            alert("Form submitted successfully!");
+        }
+
+        const formData = {
+            name: nameInput,
+            email: emailInput,
+            password: passwordInput
+        };
+
+        console.log("Form Data:", formData);
+    });
+</script>
