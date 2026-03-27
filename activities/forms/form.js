@@ -9,8 +9,6 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     if (nameInput === "" || emailInput === "" || passwordInput === "") {
         alert("Please fill in all required fields.");
         return;
-    } else {
-        alert("Form submitted successfully!");
     }
 
     if (!age || age <18) {
