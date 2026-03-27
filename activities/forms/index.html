@@ -18,6 +18,7 @@
         </ul>
     </nav>
     <main>
+        <div id="message"></div>
         <form action="formprocs.html" method="get" id="myForm">
             <fieldset>
                 <legend>Personal Information</legend>
@@ -65,39 +66,14 @@
                 </div>
             </fieldset>
         </form>
+        <p class="question">What is AJAX?</p>
+        <p class="answer">AJAX stands for Asynchronous JavaScript and XML. It is a technique used to create dynamic and interactive web applications by allowing data to be sent and received asynchronously without interfering with the display and behavior of the existing page.</p>
+        <p class="question">Why do you put your JS Code in a separate file?</p>
+        <p class="answer">Putting JavaScript code in a separate file helps to keep the HTML file clean and organized. It also allows for better reusability and maintainability of the code, as the same JavaScript file can be included in multiple HTML files.</p>
     </main>
     <footer>
         <p>&copy; 2026 Forms Activity</p>
     </footer>
 </body>
 </html>
-<script>
-    document.getElementById("myForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const nameInput = document.getElementById("name").value;
-        const emailInput = document.getElementById("email").value;
-        const passwordInput = document.getElementById("password").value;
-        const age = document.getElementById("age").value;
-
-        if (nameInput === "" || emailInput === "" || passwordInput === "") {
-            alert("Please fill in all required fields.");
-            return;
-        } else {
-            alert("Form submitted successfully!");
-        }
-
-        if (!age || age <18) {
-            alert("You must be at least 18 years old to submit this form.");
-            return;
-        }
-
-        const formData = {
-            name: nameInput,
-            email: emailInput,
-            password: passwordInput
-        };
-
-        console.log("Form Data:", formData);
-    });
-</script>
+<script src="form.js"></script>
