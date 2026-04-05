@@ -1,0 +1,15 @@
+{
+  "submissions": [
+    {
+      "type": "contact",
+      "name": "John Doe",
+      "message": "Hello there!",
+      "date": "2026-04-05T14:30:00"
+    },
+    {
+      "type": "newsletter",
+      "email": "john@email.com",
+      "date": "2026-04-05T14:35:00"
+    }
+  ]
+}
