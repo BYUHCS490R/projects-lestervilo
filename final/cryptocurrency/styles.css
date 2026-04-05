@@ -43,6 +43,24 @@ nav a:hover {
     border-radius: 3px;
 }
 
+.current {
+    background-color: #0a4ea7;
+    color: white;
+    border-radius: 3px;
+}
+
+.contact {
+    background-color: #dadcdf;
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+    padding: 20px 20px;
+}
+
+.contact ul {
+    padding-left: 0;
+    margin-left: 10px;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +97,11 @@ main {
     min-width: 300px;
 }
 
+p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
 form {
     margin-top: 20px;
 }
@@ -90,6 +113,10 @@ fieldset {
 
 legend {
     font-weight: bold;
+    background-color: #0a4ea7;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -101,7 +128,7 @@ input[type="text"], input[type="email"], textarea {
 }
 
 input[type="submit"] {
-    background-color: #e36262;
+    background-color: #0a4ea7;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -140,7 +167,38 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        max-width: 100%;
+    }
+
+    main {
+        max-width: 100%;
+    }
+
+    .overview, .goals {
+        margin-top: 10px;
+    }
+}
+
+@media print {
+    nav, footer {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    aside, main {
+        max-width: 100%;
+    }
 }
