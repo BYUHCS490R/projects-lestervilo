@@ -23,7 +23,7 @@ document.getElementById("contactform").addEventListener("submit", function(event
 
     console.log("Form Data Collected:", formData);
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "submit.json", true);
+    xhr.open("GET", "submit.json", true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.onload = function() {
         if (xhr.status === 200) {

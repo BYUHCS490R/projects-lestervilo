@@ -100,6 +100,19 @@ main {
     min-width: 300px;
 }
 
+caption {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+    caption-side: bottom;
+}
+
+caption a {
+    color: #0a4ea7;
+    text-decoration: none;
+}
+
 .services {
     background-color: #abfcea;
     padding: 30px;
@@ -186,18 +199,35 @@ input[type="submit"]:hover {
     border-left: 5px solid #e36262;
 }
 
+.photocontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .visual, .charts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin: 0 auto;
-    max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+.visual div, .charts div {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.visual img, .charts img {
     width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     margin: 0 auto;
 }
@@ -246,11 +276,7 @@ footer {
         flex-direction: column;
     }
 
-    aside {
-        max-width: 100%;
-    }
-
-    main {
+    main, aside {
         max-width: 100%;
     }
 
