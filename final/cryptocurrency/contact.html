@@ -6,6 +6,7 @@
     <title>Financial Analysis - Contacts</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<body>
     <header>
         <h1>Financial Analysis</h1>
     </header>
@@ -18,7 +19,6 @@
             <li><a href="services.html">Services</a></li>
         </ul>
     </nav>
-<body>
     <div class="container">
         <main>
             <div class="contact">
@@ -30,21 +30,21 @@
                 <ul>
                     <li>Email: <a href="mailto:info@financialanalysis.com">info@financialanalysis.com</a></li>
                     <li>Phone: (123) 456-7890</li>
-                    <li>Address: 123 Financial Street, Suite 100, City, State 12345</li>
+                    <li>Fax: (123) 456-7891</li>
                 </ul>
             </div>
             <br>
             <h3>Office Location and Hours</h3>
             <p>Our office is located at 123 Financial Street, Suite 100, City, State 12345. We are open Monday through Friday from 9:00 AM to 6:00 PM.</p>
-            <figure>
-                <img src="office-location.jpg" alt="Office Location">
+            <figure class="map">
+                <img src="./images/map.jpg" alt="Office Location">
                 <figcaption>Our Office Location</figcaption>
             </figure>
             <br>
             <fieldset class="form">
                 <legend>Send Us a Message</legend>
                 <p>If you prefer to send us a message directly through our website, please fill out the contact form below:</p>
-                <form>
+                <form method="get" action="#" id="contactform">
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required><br>
                     <label for="email">Email:</label><br>
