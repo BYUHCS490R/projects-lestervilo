@@ -1,42 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.getElementById("contactform").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    // CONTACT FORM
-    const contactForm = document.getElementById("contactform");
+    const nameInput = document.getElementById("name").value;
+    const emailInput = document.getElementById("email").value;
+    const messageInput = document.getElementById("message").value;
 
-    contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    if (nameInput === "" || emailInput === "" || messageInput === "") {
+        alert("Please fill in your Name, Email, and Message.");
+        return;
+    }
 
-        const data = {
-            name: document.getElementById("name").value,
-            message: document.getElementById("message").value,
-            date: new Date().toLocaleString()
-        };
+    if (messageInput.length < 10) {
+        alert("Please provide a message with at least 10 characters so we can better assist you.");
+        return;
+    }
 
-        let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
-        contacts.push(data);
-        localStorage.setItem("contacts", JSON.stringify(contacts));
+    const formData = {
+        name: nameInput,
+        email: emailInput,
+        message: messageInput
+    };
 
-        alert("Message sent!");
-        contactForm.reset();
-    });
+    console.log("Form Data Collected:", formData);
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "submit.json", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            alert("Form submitted successfully!");
+            const response = JSON.parse(xhr.responseText);
+            console.log("Server Response:", response);
+            document.getElementById("responseMessage").innerText = response.message;
+            document.getElementById("contactform").reset();
+        } else {
+            alert("There was an error submitting the form.");
+        }
+    };
 
-    // NEWSLETTER FORM
-    const newsletterForm = document.getElementById("newsletter");
-
-    newsletterForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const data = {
-            email: document.getElementById("email").value,
-            date: new Date().toLocaleString()
-        };
-
-        let subscribers = JSON.parse(localStorage.getItem("subscribers")) || [];
-        subscribers.push(data);
-        localStorage.setItem("subscribers", JSON.stringify(subscribers));
-
-        alert("Subscribed successfully!");
-        newsletterForm.reset();
-    });
-
+    xhr.send(JSON.stringify(formData));
 });
