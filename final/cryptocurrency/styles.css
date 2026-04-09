@@ -96,26 +96,17 @@ main {
     min-width: 300px;
 }
 
-caption {
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #555;
-    caption-side: bottom;
-    text-align: center;
-}
-
-caption a {
-    color: #0a4ea7;
-    text-decoration: none;
-}
-
 .services {
     background-color: #abfcea;
     padding: 30px;
     margin: 20px 0;
     margin-left: 10px;
     border-radius: 3px;
+}
+
+h3 a {
+    color: #0a4ea7;
+    text-decoration: none;
 }
 
 p {
@@ -151,6 +142,13 @@ tr:nth-child(even) {
 fieldset {
     border: 1px solid #ccc;
     padding: 10px;
+}
+
+#link {
+    color: #0a4ea7;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 legend {
@@ -224,7 +222,7 @@ input[type="submit"]:hover {
 
 .parent {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin: 0 auto;
 }
@@ -234,6 +232,12 @@ input[type="submit"]:hover {
     padding: 20px;
     border-radius: 5px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 iframe {
