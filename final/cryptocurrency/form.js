@@ -4,9 +4,10 @@ document.getElementById("contactform").addEventListener("submit", function(event
     const nameInput = document.getElementById("name").value;
     const emailInput = document.getElementById("email").value;
     const messageInput = document.getElementById("message").value;
+    const phoneInput = document.getElementById("phone").value;
 
-    if (nameInput === "" || emailInput === "" || messageInput === "") {
-        alert("Please fill in your Name, Email, and Message.");
+    if (nameInput === "" || emailInput === "" || messageInput === "" || phoneInput === "") {
+        alert("Please fill in all fields.");
         return;
     }
 
@@ -18,6 +19,7 @@ document.getElementById("contactform").addEventListener("submit", function(event
     const formData = {
         name: nameInput,
         email: emailInput,
+        phone: phoneInput,
         message: messageInput
     };
 
