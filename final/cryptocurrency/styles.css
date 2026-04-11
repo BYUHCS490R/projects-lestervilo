@@ -302,6 +302,11 @@ footer {
         border-top: 1px solid #555;
         padding: 15px;
     }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media print {
