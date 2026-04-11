@@ -309,6 +309,50 @@ footer {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    main, aside {
+        max-width: 100%;
+    }
+
+    .overview, .goals {
+        margin-top: 10px;
+    }
+
+    .visual, .charts, .parent {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .map img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav ul {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        justify-content: center;
+        border-top: 1px solid #555;
+        padding: 15px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
 @media print {
     nav, footer {
         display: none;
