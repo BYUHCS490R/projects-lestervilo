@@ -125,7 +125,7 @@ main {
 }
 
 .book-item {
-    background-color: #023E8A;
+    background-color: #232e35;
     padding: 15px;
     width: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -155,12 +155,22 @@ footer p, footer a {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     nav {
-        flex-direction: column;
-        align-items: center;
+        display: block;
+        text-align: center;
     }
 
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 15px;
+    }
+    
     .parent {
         flex-direction: column;
     }
